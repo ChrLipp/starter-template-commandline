@@ -20,4 +20,4 @@ You can use this template as a starting point for your own project:
 - Building `./gradlew build`
 - Running `./gradlew run`
 - Testing `./gradlew test`
-- Dependency upates `./gradlew dependencyUpdates`
+- Dependency updates `./gradlew dependencyUpdates`, change version numbers in `gradle.properties`
