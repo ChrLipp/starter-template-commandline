@@ -13,11 +13,13 @@ import picocli.CommandLine
     versionProvider = FileVersionProvider::class)
 @Component
 class StarterTemplateParameter : Runnable {
-    @CommandLine.Option(
-        names = ["-o", "--option"],
-        description = ["Some option."])
+
+    @CommandLine.Option(names = ["-o", "--option"], description = ["Provide some option."])
     private var option : String = ""
 
+    /**
+     * Place your application logic entry point here.
+     */
     override fun run() {
         println(option)
     }

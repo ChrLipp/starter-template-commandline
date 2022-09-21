@@ -1,5 +1,5 @@
 # Kotlin Quick Start
-A template for a command line application with the following features
+A template project for a command line application with the following features
 
 - written in [Kotlin](https://kotlinlang.org/)
 - powered by [Spring Boot](https://spring.io/projects/spring-boot)

@@ -42,7 +42,7 @@ ext {
 
 // Java options
 java.sourceCompatibility = JavaVersion.VERSION_18
-java.targetCompatibility = JavaVersion.VERSION_18
+java.targetCompatibility = JavaVersion.VERSION_16
 
 // Kotlin options
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
