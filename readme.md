@@ -7,7 +7,8 @@ A template project for a command line application with the following features
 - Command line handling with [Picocli](https://picocli.info/), the annotations are processed at compile time
 
 ## Steps to use the template
-You can use this template as a starting point for your own project:
+I use this template as a starting point for my command line applications.
+If you want to try it, you have to follow these steps:  
 
 - Create repository on Github with this [link](https://github.com/ChrLipp/starter-template/generate).
   Pull the repository.

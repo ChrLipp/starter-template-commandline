@@ -1,7 +1,5 @@
 package at.corba.startertemplate
 
-import mu.KotlinLogging
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -10,13 +8,9 @@ import picocli.CommandLine
 import kotlin.system.exitProcess
 
 @SpringBootApplication
-class StarterTemplateApplication : CommandLineRunner {
-    /** The logger */
-    private val log = KotlinLogging.logger {}
-
-    @Autowired
-    private val commandLineParameter: StarterTemplateParameter? = null
-
+class StarterTemplateApplication(
+    private val commandLineParameter: StarterTemplateParameter
+) : CommandLineRunner {
     override fun run(vararg args: String?) {
         CommandLine(commandLineParameter).execute(*args)
     }
