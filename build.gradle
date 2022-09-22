@@ -32,11 +32,11 @@ dependencies {
 ext {
 	ARGS = [
 		// help
-		'-h'
+//		'-h'
 		// version
 //		'-V'
 		// option
-//		'-o', 'Argument'
+		'-o', 'Argument'
 	]
 }
 

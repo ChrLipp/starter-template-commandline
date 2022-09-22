@@ -1,7 +1,9 @@
 package at.corba.startertemplate
 
+import mu.KotlinLogging
 import org.springframework.stereotype.Component
 import picocli.CommandLine
+import java.util.concurrent.Callable
 
 /**
  * Define your options here. Remove the example option.
@@ -12,7 +14,9 @@ import picocli.CommandLine
     mixinStandardHelpOptions = true,
     versionProvider = FileVersionProvider::class)
 @Component
-class StarterTemplateParameter : Runnable {
+class StarterTemplateCommand : Callable<Int> {
+    /** The logger */
+    private val log = KotlinLogging.logger {}
 
     @CommandLine.Option(names = ["-o", "--option"], description = ["Provide some option."])
     private var option : String = ""
@@ -20,7 +24,8 @@ class StarterTemplateParameter : Runnable {
     /**
      * Place your application logic entry point here.
      */
-    override fun run() {
-        println(option)
+    override fun call(): Int {
+        log.info("Option given: $option")
+        return 0
     }
 }

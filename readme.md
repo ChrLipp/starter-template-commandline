@@ -11,9 +11,9 @@ I use this template as a starting point for my command line applications.
 If you want to try it, you have to follow these steps:  
 
 - Create repository on Github with this [link](https://github.com/ChrLipp/starter-template/generate).
-  Pull the repository.
+- Clone the repository.
 - Choose `rootProject.name` in `settings.gradle`
-- Choose group in `gradle.properties`
+- Choose group and version in `gradle.properties`
 - Refactor class `StarterTemplateApplication` (name and namespace)
 - Refactor class `StarterTemplateConfiguration` (name and namespace)
 - Refactor class `StarterTemplateApplicationTests` (name and namespace)
@@ -21,7 +21,7 @@ If you want to try it, you have to follow these steps:
 - Set log level for your namespace `logging.level.*` in `application.properties`
 - Change `readme.md`
 - Run the application with `./gradlew run`
-- When using IntelliJ IDEA, edit "Run configuration" and 
+- When using IntelliJ IDEA, edit "Run configuration" and
   add environment variable `spring.output.ansi.enabled=ALWAYS`
 
 ## Gradle usage

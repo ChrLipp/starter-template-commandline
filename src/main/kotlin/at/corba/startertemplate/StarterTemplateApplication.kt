@@ -1,6 +1,7 @@
 package at.corba.startertemplate
 
 import org.springframework.boot.CommandLineRunner
+import org.springframework.boot.ExitCodeGenerator
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -9,10 +10,17 @@ import kotlin.system.exitProcess
 
 @SpringBootApplication
 class StarterTemplateApplication(
-    private val commandLineParameter: StarterTemplateParameter
-) : CommandLineRunner {
+    private val commandLineParameter: StarterTemplateCommand
+) : CommandLineRunner, ExitCodeGenerator {
+    /** Variable for passing the exit code */
+    private var exitCode: Int = 0
+
     override fun run(vararg args: String?) {
-        CommandLine(commandLineParameter).execute(*args)
+        exitCode = CommandLine(commandLineParameter).execute(*args)
+    }
+
+    override fun getExitCode(): Int {
+        return exitCode
     }
 }
 
