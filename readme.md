@@ -1,6 +1,7 @@
 # Kotlin Quick Start
 A template project for a command line application with the following features
 
+- Based on Java 19
 - written in [Kotlin](https://kotlinlang.org/)
 - powered by [Spring Boot](https://spring.io/projects/spring-boot)
 - build with [Gradle](https://gradle.org/)
