@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-	id 'com.github.ben-manes.versions' version "$GRADLE_VERSIONS_PLUGIN_VERSION"
+	id 'io.github.ben-manes.versions' version "$GRADLE_VERSIONS_PLUGIN_VERSION"
 	id 'io.spring.dependency-management' version "$SPRING_DEPENDENCY_VERSION"
 	id 'org.jetbrains.kotlin.plugin.spring' version "$KOTLIN_VERSION"
 	id 'org.jetbrains.kotlin.jvm' version "$KOTLIN_VERSION"
@@ -45,15 +45,15 @@ ext {
 
 // Java options
 java {
-	sourceCompatibility = JavaVersion.VERSION_21
-	targetCompatibility = JavaVersion.VERSION_21
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
 }
 
 // Kotlin options
 kotlin {
 	compilerOptions {
 		freeCompilerArgs.addAll '-Xjsr305=strict'
-		jvmTarget = JvmTarget.JVM_21
+		jvmTarget = JvmTarget.JVM_25
 	}
 }
 
